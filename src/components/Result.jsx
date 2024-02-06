@@ -13,26 +13,27 @@ export const Result = (props, question, correct) => {
         ) : (
           ""
         )}
-        {props.correct > allQuest - 6 ? (
+        
+        {props.correct > allQuest - 6 && props.correct !== allQuest ? (
           <p className="text-3xl text-center">
             Вы отлично знаете Гарри Поттер. Молодец :)
           </p>
         ) : (
           ""
         )}
-        {props.correct > allQuest - 10 ? (
+        {props.correct > allQuest - 10 && props.correct < allQuest -6 ? (
           <p className="text-3xl text-center">Вы хорошо знаете Гарри Поттер.</p>
         ) : (
           ""
         )}
-        {props.correct > allQuest - 15 ? (
+        {props.correct > allQuest - 15 && props.correct <allQuest - 10 ? (
           <p className="text-3xl text-center">
             Вам стоит узнать о ней что то новое
           </p>
         ) : (
           ""
         )}
-        {props.correct > allQuest - 20 ? (
+        {props.correct > allQuest - 20 && props.correct < allQuest - 15 ? (
           <p className="text-3xl text-center">
             Вы ужасно знаете Гарри Поттер :(
           </p>
@@ -46,6 +47,7 @@ export const Result = (props, question, correct) => {
         ) : (
           ""
         )}
+        
         <p className=" text-2xl text-center">
           Вы правильно ответили на {props.correct} вопросов из {allQuest}
         </p>
