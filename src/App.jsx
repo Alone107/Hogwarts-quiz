@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="bg-[url('./assets/3.jpg')] h-screen w-full bg-no-repeat bg-cover flex items-center justify-center">
       {pismoOpen && (
-        <a className="  opacity-100">
+        <a className="">
           <img
             onClick={onClickPismo}
             src={pismo}
